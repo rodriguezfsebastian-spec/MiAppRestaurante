@@ -1,0 +1,285 @@
+.mobile-frame {
+  position: relative;
+  width: 375px;  /* Ajusta al ancho de tu simulador */
+  height: 667px; /* Ajusta a la altura de tu simulador */
+  margin: 0 auto;
+  background-color: white;
+  border: 8px solid #333;
+  border-radius: 25px;
+  overflow: hidden; /* Importante: el marco no debe tener scroll */
+  display: flex;
+  flex-direction: column;
+}
+
+.content-wrapper {
+  flex: 1;           /* Toma todo el espacio disponible arriba */
+  overflow-y: auto;  /* El scroll solo ocurre aquí dentro */
+  overflow-x: hidden;
+  padding-bottom: 10px;
+}
+
+/* Forzamos que la Navbar no se mueva del fondo */
+app-navbar {
+  display: block;
+  height: 65px;
+  width: 100%;
+}
+  
+  .login-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: center; /* Centra el contenido verticalmente */
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .brand-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .logo-box {
+    width: 80px;
+    height: 80px;
+    background: #ffeef0;
+    border: 2px solid #ff5a60;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+  }
+  
+  .form-body {
+    width: 100%;
+  }
+  
+  .form-group {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    color: #ff5a60;
+    font-size: 12px;
+    font-weight: bold;
+    display: block;
+    text-align: left;
+  }
+  
+  .form-group input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    padding: 8px 0;
+    outline: none;
+    box-sizing: border-box;
+  }
+  
+  .btn-primary, .btn-secondary {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  
+  .btn-primary { background-color: #ff5a60; color: white; }
+  .btn-secondary { background-color: #ff8e92; color: white; }
+  
+  .google-auth {
+    margin-top: 20px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #555;
+  }
+
+  /* --- Estilos para la Vista de Restaurantes --- */
+
+/* Contenedor de pestañas superiores (Restaurante | Información | Lugar) */
+.tabs-header {
+    display: flex;
+    background-color: #ffeef0; /* El rosado pálido del mockup */
+    width: 100%;
+  }
+  
+  .tab-link {
+    flex: 1;
+    padding: 15px 5px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+    color: #ff5a60; /* El rojo característico */
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .tab-link.active {
+    background-color: #ff5a60;
+    color: white;
+  }
+  
+  /* Área de contenido con scroll */
+  .content-scroll {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  /* Buscador redondeado */
+  .search-bar {
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 25px;
+    border: 1px solid #ddd;
+    background-color: #f1f1f1;
+    box-sizing: border-box;
+  }
+  
+  /* Tarjeta de Información */
+  .restaurant-info {
+    border: 1px solid #eee;
+    padding: 15px;
+    border-radius: 12px;
+    background: #fff;
+  }
+  
+  .restaurant-info h3 {
+    margin: 0 0 8px 0;
+    color: #333;
+  }
+  
+  .restaurant-info p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+  }
+  
+  /* Simulación de Mapa */
+  .map-placeholder {
+    width: 100%;
+    height: 200px;
+    background-color: #e0e0e0;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: 1px solid #ccc;
+  }
+  
+  .marker {
+    font-size: 40px;
+    color: #ff5a60;
+  }
+  
+  /* Navegación Inferior Fija */
+  .bottom-nav {
+    height: 70px;
+    display: flex;
+    border-top: 1px solid #eee;
+    background: white;
+    width: 100%;
+  }
+  
+  .nav-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    color: #888;
+    cursor: pointer;
+  }
+  
+  .nav-item.active {
+    color: #ff5a60;
+    background-color: #ffeef0;
+    font-weight: bold;
+  }
+
+  /* --- Estilos de la Pantalla de Perfil --- */
+
+.profile-header {
+    background: var(--app-pink);
+    padding: 30px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .avatar-circle {
+    width: 90px;
+    height: 90px;
+    background: white;
+    border: 2px solid var(--app-red);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    margin: 0 auto 10px;
+  }
+  
+  .info-list {
+    padding: 20px;
+  }
+  
+  .info-item {
+    border-bottom: 1px solid #f0f0f0;
+    padding: 15px 0;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .info-item strong {
+    color: var(--app-red);
+    display: inline-block;
+    width: 100px;
+  }
+  
+  .history-section {
+    padding: 20px;
+    background: #fff;
+  }
+  
+  .history-section h4 {
+    color: var(--app-red);
+    margin-bottom: 15px;
+    border-left: 4px solid var(--app-red);
+    padding-left: 10px;
+  }
+  
+  .months-row {
+    display: flex;
+    justify-content: space-around;
+    background: var(--app-pink);
+    padding: 15px;
+    border-radius: 10px;
+  }
+  
+  .months-row span {
+    font-weight: bold;
+    color: var(--app-red);
+    font-size: 13px;
+    cursor: pointer;
+  }
+  
+  .months-row span:hover {
+    text-decoration: underline;
+  }
+  .tab-link.active {
+    background-color: #ff5a60; /* El rojo coral del mockup */
+    color: white;
+  }
+  

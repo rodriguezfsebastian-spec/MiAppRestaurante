@@ -1,0 +1,64 @@
+.perfil-page {
+    padding: 10px;
+    background-color: white;
+  }
+  
+  /* Banner Verde */
+  .banner-verde {
+    background-color: #2d5a4c; /* Verde oscuro del logo */
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    border: 1px solid #ff5a60;
+    margin-bottom: 15px;
+  }
+  
+  /* Layout de cajas paralelas */
+  .info-superior {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .datos-personales, .favoritos-box {
+    border: 1px solid #ff5a60; /* Borde rosa delgado */
+    padding: 10px;
+    flex: 1;
+    font-size: 12px;
+  }
+  
+  /* Icono de usuario rosa */
+  .avatar-pink {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #ff5a60;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    color: #ff5a60;
+    font-size: 30px;
+  }
+  
+  /* Tabla de Historial */
+  .historial-container {
+    text-align: center;
+  }
+  
+  .tabla-historial {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .tabla-historial th {
+    background-color: #e0e0e0; /* Gris del encabezado */
+    border: 1px solid #ff5a60;
+    padding: 8px;
+  }
+  
+  .tabla-historial td {
+    border: 1px solid #ff5a60;
+    height: 30px;
+  }

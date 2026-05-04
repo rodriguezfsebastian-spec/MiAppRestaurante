@@ -1,0 +1,139 @@
+.tabs-container {
+  display: flex;
+  border: 1px solid #ff5a60;
+  margin: 10px;
+}
+
+.tabs-container button {
+  flex: 1;
+  padding: 10px;
+  background: white;
+  border: none;
+  color: #ff5a60;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* El botón activo cambia a fondo rosa y letras blancas */
+.tabs-container button.active {
+  background-color: #ff5a60;
+  color: white;
+}
+
+.card-reserva, .detalle-info, .mapa-placeholder {
+  border: 1px solid #ff5a60;
+  margin: 10px;
+  padding: 15px;
+  min-height: 100px;
+}
+
+.btn-continuar, .btn-final-reservar {
+  width: 100%;
+  padding: 20px;
+  background: white;
+  border: 1px solid #ff5a60;
+  color: #333;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.mapa-placeholder {
+  background-color: #ff999c; /* Color rosado del mapa en el mockup */
+  height: 200px;
+  position: relative;
+}
+.card-reserva {
+  border: 1px solid #ff5a60;
+  margin: 10px;
+  padding: 15px;
+  cursor: pointer; /* Indica que es cliqueable */
+  transition: background-color 0.2s;
+}
+
+.card-reserva:active {
+  background-color: #fff0f0; /* Breve destello al presionar */
+}
+
+.btn-continuar {
+  width: 100%;
+  padding: 15px;
+  background: white;
+  border: 1px solid #ff5a60;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+}
+/* Contenedor principal del mapa */
+.map-view {
+  width: 100%;
+  height: 250px;
+  background-color: #ffb5b7; /* Color rosado del mapa del mockup */
+  border: 1px solid #ff5a60;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+/* Dibujo de las calles (simuladas con gradientes) */
+.map-grid {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(90.5deg, transparent 48%, #333 49%, #333 51%, transparent 52%),
+    linear-gradient(0deg, transparent 20%, #333 21%, #333 23%, transparent 24%),
+    linear-gradient(45deg, transparent 70%, #333 71%, #333 73%, transparent 74%);
+  opacity: 0.4;
+}
+
+/* Estilo del Pin (Marcador) */
+.map-pin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%); /* Lo centra justo en la punta del pin */
+  text-align: center;
+  z-index: 10;
+}
+
+.pin-icon {
+  font-size: 40px;
+  display: block;
+}
+
+/* Sombra debajo del pin para realismo */
+.pin-shadow {
+  width: 15px;
+  height: 5px;
+  background: rgba(0,0,0,0.2);
+  border-radius: 50%;
+  margin: -5px auto 0;
+}
+
+/* Botón Reservar Final */
+.btn-reserva-final {
+  width: 100%;
+  padding: 15px;
+  background: white;
+  border: 1px solid #ff5a60;
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.banner-logos {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff0f0; /* Fondo rosa suave */
+  border: 1px solid #ff5a60; /* Borde rosa fuerte del mockup */
+  margin-bottom: 10px;
+}
+
+.emoji-logo {
+  font-size: 80px; /* Tamaño del emoji */
+  line-height: 1;
+  display: block;
+}

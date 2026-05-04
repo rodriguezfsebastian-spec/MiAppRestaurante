@@ -1,0 +1,65 @@
+<div class="reserva-page">
+  <div class="banner-logos">
+    <span class="emoji-logo">🍔</span>
+  </div>
+
+  <!-- Selector de Pestañas (Tabs) -->
+  <div class="tabs-container">
+    <button [class.active]="tab === 1" (click)="tab = 1">Restaurante</button>
+    <button [class.active]="tab === 2" (click)="tab = 2">Información</button>
+    <button [class.active]="tab === 3" (click)="tab = 3">Lugar</button>
+  </div>
+
+  <!-- Contenido Dinámico según la pestaña -->
+  <div class="tab-content">
+    
+    <!-- VISTA 1: LISTA -->
+<!-- VISTA 1: RESTAURANTE -->
+@if (tab === 1) {
+  <!-- Al hacer clic en cualquier restaurante, saltamos a la pestaña 2 -->
+  <div class="card-reserva" (click)="tab = 2">
+    <p><strong>Restaurante 1</strong></p>
+    <p>xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx...</p>
+  </div>
+
+  <div class="card-reserva" (click)="tab = 2">
+    <p><strong>Restaurante 2</strong></p>
+    <p>xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx...</p>
+  </div>
+}
+
+<!-- VISTA 2: INFORMACIÓN -->
+@if (tab === 2) {
+  <div class="detalle-info">
+    <div class="contenido-flex">
+      <p>xxxxxxxxxxxx xxxx xxxxxxx...</p>
+      <div class="img-placeholder">
+        <!-- Aquí iría tu imagen de la copa y comida -->
+      </div>
+    </div>
+    
+    <!-- Este botón ahora activa el salto a la pestaña 3 -->
+    <button class="btn-continuar" (click)="tab = 3">Continuar</button>
+  </div>
+}
+
+<!-- VISTA 3: LUGAR (MAPA) -->
+@if (tab === 3) {
+  <div class="map-wrapper">
+    <!-- Contenedor del mapa con el pin central -->
+    <div class="map-view">
+      <div class="map-grid"></div>
+      <div class="map-pin">
+        <span class="pin-icon">📍</span>
+        <div class="pin-shadow"></div>
+      </div>
+    </div>
+    
+    <!-- Botón de acción final -->
+    <button class="btn-reserva-final" (click)="confirmarReserva()">
+      Reservar
+    </button>
+  </div>
+}
+  </div>
+</div>
