@@ -14,13 +14,11 @@ export class App {
   private router = inject(Router);
   private cdr = inject(ChangeDetectorRef); // Ayuda a forzar la actualización visual
   
-  // Usamos una variable booleana simple
   mostrarNavbar: boolean = false;
 
   constructor() {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        // Log para que veas en consola qué ruta está detectando
         console.log('Ruta actual:', event.urlAfterRedirects);
         
         const url = event.urlAfterRedirects;

@@ -1,101 +1,44 @@
-/* Contenedor principal de la pantalla */
-.login-screen { 
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    padding: 40px 20px; 
-    height: 100%;
-    box-sizing: border-box;
-    background-color: white;
-  }
-  
-  /* Encabezado con logo y título */
-  .brand-header { 
-    text-align: center; 
-    margin-bottom: 40px; 
-  }
-  
-  .brand-header h2 {
-    color: #ff5a60;
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  /* Cuerpo del formulario */
-  .form-body { 
-    width: 100%; 
-  }
-  
-  /* Grupo de formulario: corrige el error de elementos flotantes */
-  .form-group { 
-    width: 100%; 
-    margin-bottom: 25px; 
-    display: flex;
-    flex-direction: column; /* Alinea el label sobre el input */
-  }
-  
-  .form-group label { 
-    color: #ff5a60; 
-    font-size: 14px; 
-    font-weight: bold; 
-    margin-bottom: 8px;
-    text-align: left;
-  }
-  
-  .form-group input { 
-    width: 100%; 
-    border: none; 
-    border-bottom: 2px solid #eee; 
-    padding: 10px 0; 
-    font-size: 16px;
-    outline: none;
-    background: transparent;
-    transition: border-color 0.3s;
-  }
-  
-  .form-group input:focus { 
-    border-bottom-color: #ff5a60; 
-  }
-  
-  /* Botones principales */
-  .btn-primary { 
-    background-color: #ff5a60; 
-    color: white; 
-    width: 100%; 
-    padding: 15px; 
-    border-radius: 12px; 
-    border: none; 
-    font-weight: bold;
-    margin-top: 20px; 
-    cursor: pointer; 
-    font-size: 16px;
-  }
-  
-  .btn-secondary { 
-    background-color: #ff8e92; 
-    color: white; 
-    width: 100%; 
-    padding: 15px; 
-    border-radius: 12px; 
-    border: none; 
-    margin-top: 15px;
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  .form-group { 
-    width: 100%; 
-    margin-bottom: 20px; 
-    display: flex;          /* Activa el modo flexible */
-    flex-direction: column; /* Fuerza el orden vertical: label arriba, input abajo */
-  }
-  
-  .form-group label {
-    display: block; /* Asegura que ocupe todo el ancho */
-    margin-bottom: 5px;
-  }
-  
-  .form-group input {
-    width: 100%;
-    display: block;
-  }
+/* Mantenemos tu color de marca */
+.brand-header h2, .custom-label {
+  color: #ff5a60;
+  font-weight: bold;
+}
+
+/* Quitamos el borde de cuadro de Bootstrap para dejar solo la línea inferior */
+.custom-input {
+  border: none !important;
+  border-bottom: 2px solid #eee !important;
+  border-radius: 0 !important;
+  padding: 10px 0 !important;
+  box-shadow: none !important; /* Quita el resplandor azul de Bootstrap */
+  background: transparent !important;
+}
+
+.custom-input:focus {
+  border-bottom-color: #ff5a60 !important;
+}
+
+/* Botones con tus colores pero aprovechando la estructura 'btn' de Bootstrap */
+.btn-primary-custom {
+  background-color: #ff5a60 !important;
+  color: white !important;
+  padding: 12px !important;
+  border-radius: 12px !important;
+  border: none !important;
+  font-weight: bold;
+}
+
+.btn-secondary-custom {
+  background-color: #ff8e92 !important;
+  color: white !important;
+  padding: 12px !important;
+  border-radius: 12px !important;
+  border: none !important;
+  font-weight: bold;
+}
+/* Estilo para el texto de Google */
+.google-btn {
+  color: #333;
+  font-weight: 500;
+  cursor: pointer;
+}

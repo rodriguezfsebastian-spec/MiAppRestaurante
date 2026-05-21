@@ -5,7 +5,6 @@ import { Router } from '@angular/router';
   selector: 'app-login',
   standalone: true,
   templateUrl: './login.html',
-  // Borramos 'styleUrl' y usamos 'styles' directamente
   styles: [`
     .login-screen { 
       display: flex; 

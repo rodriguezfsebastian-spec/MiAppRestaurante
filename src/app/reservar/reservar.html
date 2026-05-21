@@ -12,54 +12,80 @@
 
   <!-- Contenido Dinámico según la pestaña -->
   <div class="tab-content">
-    
+
     <!-- VISTA 1: LISTA -->
-<!-- VISTA 1: RESTAURANTE -->
-@if (tab === 1) {
-  <!-- Al hacer clic en cualquier restaurante, saltamos a la pestaña 2 -->
-  <div class="card-reserva" (click)="tab = 2">
-    <p><strong>Restaurante 1</strong></p>
-    <p>xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx...</p>
-  </div>
+    <!-- VISTA 1: RESTAURANTE -->
+    @if (tab === 1) {
+    <!-- Al hacer clic en cualquier restaurante, saltamos a la pestaña 2 -->
+    <div class="card-reserva" (click)="tab = 2">
+      <p><strong>Restaurante 1</strong></p>
+      <p>xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx...</p>
+    </div>
 
-  <div class="card-reserva" (click)="tab = 2">
-    <p><strong>Restaurante 2</strong></p>
-    <p>xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx...</p>
-  </div>
-}
+    <div class="card-reserva" (click)="tab = 2">
+      <p><strong>Restaurante 2</strong></p>
+      <p>xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx...</p>
+    </div>
+    }
 
-<!-- VISTA 2: INFORMACIÓN -->
-@if (tab === 2) {
-  <div class="detalle-info">
-    <div class="contenido-flex">
-      <p>xxxxxxxxxxxx xxxx xxxxxxx...</p>
-      <div class="img-placeholder">
-        <!-- Aquí iría tu imagen de la copa y comida -->
+    <!-- VISTA 2: INFORMACIÓN -->
+    @if (tab === 2) {
+    <div class="container mt-4">
+      <!-- Fila para el contenido principal (Texto + Emoji vs Imagen/Cuadro) -->
+      <div class="row align-items-center mb-4">
+
+        <!-- Columna Izquierda: Texto -->
+        <div class="col-7">
+          <div class="d-flex align-items-start">
+            <p class="text-muted small me-2">
+              xxxxxxxxxxxx xxxx xxxxxxxx xxxxxxxxxxxx xxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxx xxxxx xxxxxxxxxxxx xxxxxxx xxxxxxxx xxxxxxx
+            </p>
+          </div>
+        </div>
+
+        <!-- Columna Derecha: Recuadro rosa -->
+        <div class="col-5">
+          <div class="mockup-image-box d-flex justify-content-center align-items-center">
+            <span style="font-size: 10rem;">🍹</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Botón Continuar centrado abajo -->
+      <div class="row">
+        <div class="col-12">
+          <div class="continue-box p-4 text-center">
+            <button class="btn btn-outline-danger btn-lg w-75 fw-bold" (click)="tab = 3">
+              Continuar
+            </button>
+          </div>
+        </div>
       </div>
     </div>
-    
-    <!-- Este botón ahora activa el salto a la pestaña 3 -->
-    <button class="btn-continuar" (click)="tab = 3">Continuar</button>
-  </div>
-}
+    }
 
-<!-- VISTA 3: LUGAR (MAPA) -->
-@if (tab === 3) {
-  <div class="map-wrapper">
-    <!-- Contenedor del mapa con el pin central -->
-    <div class="map-view">
-      <div class="map-grid"></div>
-      <div class="map-pin">
-        <span class="pin-icon">📍</span>
-        <div class="pin-shadow"></div>
+    <!-- VISTA 3: LUGAR (MAPA) -->
+    @if (tab === 3) {
+    <div class="map-wrapper">
+      <!-- Contenedor del mapa con el pin central -->
+      <div class="map-view">
+        <div class="map-grid"></div>
+        <div class="map-pin">
+          <span class="pin-icon">📍</span>
+          <div class="pin-shadow"></div>
+        </div>
       </div>
+
+      <!-- Botón de acción final -->
+        <div class="row">
+          <div class="col-12 text-center"> <!-- Agregamos text-center aquí -->
+            <button class="btn btn-outline-danger btn-lg w-75 fw-bold" (click)="confirmarReserva()">
+              Reservar
+            </button>
+          </div>
+        </div>
     </div>
-    
-    <!-- Botón de acción final -->
-    <button class="btn-reserva-final" (click)="confirmarReserva()">
-      Reservar
-    </button>
-  </div>
-}
+    }
   </div>
 </div>

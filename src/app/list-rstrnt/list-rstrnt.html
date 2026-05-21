@@ -1,14 +1,25 @@
-<div class="main-container">
-  <!-- Barra de búsqueda del mockup -->
-  <input type="text" class="search-bar" placeholder="Search">
-  
-  <h2 class="section-title">Restaurantes favoritos</h2>
-
-  <!-- Grid de tarjetas blancas -->
-  @for (item of items; track item.id) {
-    <div class="restaurant-card" (click)="irAReservar()">
-      <h3>Restaurante {{item.id}}</h3>
-      <p>{{item.texto}}</p>
+<div class="container mt-4 main-container">
+  <!-- Barra de búsqueda con estilo Bootstrap -->
+  <div class="mb-4">
+    <div class="input-group search-container">
+      <span class="input-group-text bg-transparent border-end-0">🔍</span>
+      <input type="text" class="form-control border-start-0 search-bar-bootstrap" placeholder="Search">
     </div>
-  }
+  </div>
+  
+  <h2 class="section-title h5 mb-3">Restaurantes favoritos</h2>
+
+  <!-- Grid de tarjetas -->
+  <div class="row">
+    @for (item of items; track item.id) {
+      <div class="col-12 col-md-6 mb-3">
+        <div class="card restaurant-card shadow-sm h-100" (click)="irAReservar()">
+          <div class="card-body">
+            <h3 class="card-title h6 fw-bold">Restaurante {{item.id}}</h3>
+            <p class="card-text text-muted small">{{item.texto}}</p>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
 </div>

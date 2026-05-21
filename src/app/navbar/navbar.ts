@@ -71,6 +71,6 @@ export class Navbar {
   }
 
   navegar(ruta: string) {
-    this.router.navigate([`/${ruta}`]);
+    this.router.navigate([`/${ruta}`]); //Cambia la dirección en la barra de búsqueda del navegador
   }
 }
