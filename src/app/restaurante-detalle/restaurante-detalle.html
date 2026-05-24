@@ -1,0 +1,42 @@
+@if (restaurante) {
+    <div class="container mt-4 main-container">
+      <button class="btn btn-sm btn-light mb-3 text-muted" (click)="volver()">
+        ← Volver al listado
+      </button>
+  
+      <div class="logo-banner d-flex justify-content-center align-items-center mb-4">
+        <div class="logo-white-box">
+          <span style="font-size: 60px;">{{ restaurante.emoji }}</span>
+        </div>
+      </div>
+  
+      <div class="px-3 mb-3">
+        <span class="badge bg-danger mb-2">{{ restaurante.categoria }}</span>
+        <h2 class="fw-bold text-dark">{{ restaurante.nombre }}</h2>
+      </div>
+  
+      <div class="row align-items-center px-3 mb-5">
+        <div class="col-8">
+          <p class="text-muted small m-0">
+            {{ restaurante.texto }} Además, contamos con estrictos protocolos de servicio para ofrecerte la mejor experiencia gastronómica.
+          </p>
+        </div>
+        <div class="col-4 text-center">
+          <span style="font-size: 3rem;">🍹</span>
+        </div>
+      </div>
+  
+      <div class="row mt-4">
+        <div class="col-12 text-center">
+          <button class="btn btn-outline-danger btn-lg w-75 fw-bold" (click)="irAReservar()">
+            Reservar en este lugar
+          </button>
+        </div>
+      </div>
+    </div>
+  } @else {
+    <div class="container text-center mt-5">
+      <p class="text-muted">No se encontró el restaurante seleccionado.</p>
+      <button class="btn btn-danger" (click)="volver()">Ver otros restaurantes</button>
+    </div>
+  }

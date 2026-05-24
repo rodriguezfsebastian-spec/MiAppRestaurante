@@ -34,14 +34,13 @@ import { Router } from '@angular/router';
 export class ListRstrnt {
   private router = inject(Router);
 
-  // Lista basada en tus "Restaurante xxxxx"
   items = [
     { id: 1, texto: 'Restaurante xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx' },
     { id: 2, texto: 'Restaurante xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx' },
     { id: 3, texto: 'Restaurante xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx' }
   ];
 
-  irAReservar() {
-    this.router.navigate(['/reservar']);
-  }
+irADetalle(id: number) {
+  this.router.navigate(['/restaurante', id]);
+}
 }
