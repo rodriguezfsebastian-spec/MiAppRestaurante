@@ -24,7 +24,7 @@ export class RestauranteDetalle implements OnInit {
   }
 
   irAReservar() {
-    this.router.navigate(['/reservar']);
+    this.router.navigate(['/reservar', this.restaurante?.id]);
   }
 
   volver() {

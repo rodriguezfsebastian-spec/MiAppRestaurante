@@ -13,4 +13,5 @@ export const routes: Routes = [
   { path: 'perfil', component: Historial },
   { path: 'reservar', component: Reservar },
   { path: 'restaurante/:id', component: RestauranteDetalle },
+  { path: 'reservar/:id', component: Reservar }
 ];

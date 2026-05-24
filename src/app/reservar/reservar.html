@@ -1,91 +1,66 @@
 <div class="reserva-page">
   <div class="banner-logos">
-    <span class="emoji-logo">🍔</span>
+    <span class="emoji-logo">🍖</span>
   </div>
 
   <!-- Selector de Pestañas (Tabs) -->
-  <div class="tabs-container">
-    <button [class.active]="tab === 1" (click)="tab = 1">Restaurante</button>
-    <button [class.active]="tab === 2" (click)="tab = 2">Información</button>
-    <button [class.active]="tab === 3" (click)="tab = 3">Lugar</button>
-  </div>
-
-  <!-- Contenido Dinámico según la pestaña -->
-  <div class="tab-content">
-
-    <!-- VISTA 1: LISTA -->
-    <!-- VISTA 1: RESTAURANTE -->
-    @if (tab === 1) {
-    <!-- Al hacer clic en cualquier restaurante, saltamos a la pestaña 2 -->
-    <div class="card-reserva" (click)="tab = 2">
-      <p><strong>Restaurante 1</strong></p>
-      <p>xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx...</p>
+@if (restaurante) {
+  <div class="container mt-3 main-container">
+    <div class="logo-banner d-flex justify-content-center align-items-center mb-3">
+      <div class="logo-white-box">
+        <span style="font-size: 60px;">{{ restaurante.emoji }}</span>
+      </div>
     </div>
 
-    <div class="card-reserva" (click)="tab = 2">
-      <p><strong>Restaurante 2</strong></p>
-      <p>xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx...</p>
+    <div class="row g-0 text-center mb-4 border-coral rounded overflow-hidden">
+      <div class="col-4 p-2 tab-item" [class.active-tab]="tab === 1" (click)="tab = 1">Restaurante</div>
+      <div class="col-4 p-2 tab-item" [class.active-tab]="tab === 2" (click)="tab = 2">Información</div>
+      <div class="col-4 p-2 tab-item" [class.active-tab]="tab === 3" (click)="tab = 3">Lugar</div>
     </div>
-    }
 
-    <!-- VISTA 2: INFORMACIÓN -->
-    @if (tab === 2) {
-    <div class="container mt-4">
-      <!-- Fila para el contenido principal (Texto + Emoji vs Imagen/Cuadro) -->
-      <div class="row align-items-center mb-4">
+    <div class="card p-4 border-coral shadow-sm mb-4">
+      
+      @if (tab === 1) {
+        <div class="animate-fade">
+          <h3 class="fw-bold text-dark h5 mb-3">{{ restaurante.nombre }}</h3>
+          <p class="text-muted small">Estás visualizando la sección principal para gestionar tu orden en este establecimiento.</p>
+        </div>
+      }
 
-        <!-- Columna Izquierda: Texto -->
-        <div class="col-7">
-          <div class="d-flex align-items-start">
-            <p class="text-muted small me-2">
-              xxxxxxxxxxxx xxxx xxxxxxxx xxxxxxxxxxxx xxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxx xxxxx xxxxxxxxxxxx xxxxxxx xxxxxxxx xxxxxxx
+      @if (tab === 2) {
+        <div class="row align-items-center animate-fade">
+          <div class="col-8">
+            <p class="text-muted small m-0">
+              {{ restaurante.texto }} Disfruta de una experiencia gastronómica de alta calidad con nosotros.
             </p>
           </div>
-        </div>
-
-        <!-- Columna Derecha: Recuadro rosa -->
-        <div class="col-5">
-          <div class="mockup-image-box d-flex justify-content-center align-items-center">
-            <span style="font-size: 10rem;">🍹</span>
+          <div class="col-4 text-center">
+            <span style="font-size: 3rem;">🍹</span>
           </div>
         </div>
+      }
 
-      </div>
-
-      <!-- Botón Continuar centrado abajo -->
-      <div class="row">
-        <div class="col-12">
-          <div class="continue-box p-4 text-center">
-            <button class="btn btn-outline-danger btn-lg w-75 fw-bold" (click)="tab = 3">
-              Continuar
-            </button>
-          </div>
+      @if (tab === 3) {
+        <div class="animate-fade">
+          <h4 class="fw-bold h6 text-danger">Zona de Ubicación</h4>
+          <p class="text-muted small">Sector exclusivo de {{ restaurante.categoria }}. Mesa asignada automáticamente en zona VIP.</p>
         </div>
+      }
+
+    </div>
+
+    <div class="row">
+      <div class="col-12 text-center">
+        <button class="btn btn-outline-danger btn-lg w-75 fw-bold" (click)="confirmarReserva()">
+          Confirmar Reserva
+        </button>
       </div>
     </div>
-    }
-
-    <!-- VISTA 3: LUGAR (MAPA) -->
-    @if (tab === 3) {
-    <div class="map-wrapper">
-      <!-- Contenedor del mapa con el pin central -->
-      <div class="map-view">
-        <div class="map-grid"></div>
-        <div class="map-pin">
-          <span class="pin-icon">📍</span>
-          <div class="pin-shadow"></div>
-        </div>
-      </div>
-
-      <!-- Botón de acción final -->
-        <div class="row">
-          <div class="col-12 text-center"> <!-- Agregamos text-center aquí -->
-            <button class="btn btn-outline-danger btn-lg w-75 fw-bold" (click)="confirmarReserva()">
-              Reservar
-            </button>
-          </div>
-        </div>
-    </div>
-    }
   </div>
+} @else {
+  <div class="container text-center mt-5">
+    <p class="text-muted">Error al cargar los datos de la reserva.</p>
+    <button class="btn btn-danger" [routerLink]="['/restaurantes']">Volver al catálogo</button>
+  </div>
+}
 </div>
