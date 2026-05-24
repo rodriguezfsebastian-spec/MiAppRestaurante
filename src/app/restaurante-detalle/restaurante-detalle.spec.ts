@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RsrvDtls } from './rsrv-dtls';
+import { RestauranteDetalle } from './restaurante-detalle';
 
-describe('RsrvDtls', () => {
-  let component: RsrvDtls;
-  let fixture: ComponentFixture<RsrvDtls>;
+describe('RestauranteDetalle', () => {
+  let component: RestauranteDetalle;
+  let fixture: ComponentFixture<RestauranteDetalle>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [RsrvDtls],
+      imports: [RestauranteDetalle],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(RsrvDtls);
+    fixture = TestBed.createComponent(RestauranteDetalle);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

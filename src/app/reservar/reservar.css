@@ -137,6 +137,7 @@
   line-height: 1;
   display: block;
 }
+<<<<<<< HEAD
 
 .banner-verde {
   background-color: #2d5a4c; /* Verde oscuro del logo */
@@ -146,3 +147,49 @@
   border: 1px solid #ff5a60;
   margin-bottom: 15px;
 }
+=======
+.border-coral {
+  border: 1px solid #ff5a60 !important;
+}
+
+.tab-item {
+  cursor: pointer;
+  background-color: white;
+  color: #ff5a60;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.active-tab {
+  background-color: #ff5a60 !important;
+  color: white !important;
+}
+
+.logo-banner {
+  background-color: #ffdce0 !important;
+  height: 150px;
+  border-radius: 12px;
+}
+
+.logo-white-box {
+  background: white;
+  padding: 10px;
+  border: 1px solid #ffbabc;
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.animate-fade {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+>>>>>>> 6228fa62968dfbe8eb59b52ec8f2ba8ef7109b6d

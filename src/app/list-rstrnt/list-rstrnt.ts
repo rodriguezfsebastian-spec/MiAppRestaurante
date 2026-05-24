@@ -1,6 +1,7 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import { RestauranteService, Restaurante } from '../services/restaurante';
 
 @Component({
   selector: 'app-list-rstrnt',
@@ -31,9 +32,11 @@ import { Router } from '@angular/router';
     .card-title { color: #333; }
   `]
 })
-export class ListRstrnt {
+export class ListRstrnt implements OnInit {
   private router = inject(Router);
+  private restaurantService = inject(RestauranteService); // 1. Inyectamos el servicio aquí
 
+<<<<<<< HEAD
   // Lista basada en tus "Restaurante xxxxx"
   items = [
     { id: 1, texto: 'Renne Peruvian Bistro, restaurante de comida peruana y tradicionales bistrós franceses.' },
@@ -41,8 +44,17 @@ export class ListRstrnt {
     { id: 3, texto: 'Oliveto, restaurante de comida italiana artesanal como pastas, lasañas, calzones y risottos ' },
     { id: 4, texto: 'Seoul,  gastrobar y restaurante que fusiona la parrilla coreana (K-BBQ) con un concepto urbano y cosmopolita' }
   ];
+=======
+  // 2. Declaramos la variable vacía indicando que será un arreglo de Restaurantes
+  items: Restaurante[] = []; 
+>>>>>>> 6228fa62968dfbe8eb59b52ec8f2ba8ef7109b6d
 
-  irAReservar() {
-    this.router.navigate(['/reservar']);
+  ngOnInit() {
+    // 3. Al iniciar, traemos la información real del servicio
+    this.items = this.restaurantService.getRestaurantes();
+  }
+
+  irADetalle(id: number) {
+    this.router.navigate(['/restaurante', id]);
   }
 }
