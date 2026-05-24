@@ -16,8 +16,14 @@ import { Router } from '@angular/router';
       background-color: white;
     }
 
-    .brand-header { text-align: center; margin-bottom: 40px; }
-    .brand-header h2 { color: #ff5a60; margin: 10px 0; font-family: sans-serif; }
+    .brand-header {
+      background-color: #2d5a4c;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      border: 1px solid #ff5a60;
+      margin-bottom: 15px;
+    }
     
     .form-body { width: 100%; }
 

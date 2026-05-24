@@ -14,25 +14,25 @@ export class Historial {
 
   // Datos de ejemplo para el perfil del usuario
   usuario = {
-    nombres: 'xxxxxx',
-    apellidos: 'xxxxxx',
-    telefono: 'xxxxxx',
-    direccion: 'xxxxxx',
+    nombres: 'Samuel',
+    apellidos: 'Martinez',
+    telefono: '3001234567',
+    direccion: 'Calle 123',
   };
 
   // Datos de ejemplo para los restaurantes favoritos
   favoritos = [
-    { nombre: 'xxxxxx' },
-    { nombre: 'xxxxxx' },
-    { nombre: 'xxxxxx' },
-    { nombre: 'xxxxxx' },
+    { nombre: 'Renne Peruvian Bistro' },
+    { nombre: 'Juca Sushi' },
+    { nombre: 'Oliveto' },
+    { nombre: 'Seoul' },
   ];
 
   // Datos de ejemplo para el historial de reservas
   historial = {
     Enero: [{ valor: 'xxxxx' }, { valor: 'xxxxx' }],
     Febrero: [{ valor: 'xxxx' }, { valor: 'xxxx' }],
-    Marzo: [{ valor: 'xxx' }],
+    Marzo: [{ valor: 'xxxx' }],
   };
 
   // Cambia el mes activo

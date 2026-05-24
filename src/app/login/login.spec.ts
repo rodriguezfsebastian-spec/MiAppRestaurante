@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+// Unit testing que verifica que el componente fue creado y que el componente existe:
 import { Login } from './login';
 
 describe('Login', () => {

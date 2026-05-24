@@ -137,3 +137,12 @@
   line-height: 1;
   display: block;
 }
+
+.banner-verde {
+  background-color: #2d5a4c; /* Verde oscuro del logo */
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  border: 1px solid #ff5a60;
+  margin-bottom: 15px;
+}
