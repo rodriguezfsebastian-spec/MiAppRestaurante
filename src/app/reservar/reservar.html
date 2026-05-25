@@ -52,6 +52,8 @@
         </div>
         <div *ngIf="tab === 3" class="seccion-ubicacion">
           <h5 class="fw-bold h6 text-danger">Ubicación en el Mapa</h5>
+
+          <!-- Evento para ver mapa y renderisar el html -->
           <button class="btn btn-outline-danger w-10 fw-bold" style="font-size: 0.85rem; padding: 10px;" (click)="cambiarTab(3)" [class.active]="tab === 3">
             Ver Mapa
           </button>
