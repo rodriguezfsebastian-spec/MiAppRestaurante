@@ -27,7 +27,7 @@ export class Reservar implements OnInit {
   }
 
   confirmarReserva() {
-    alert(`¡Tu reserva en ${this.restaurante?.nombre} ha sido confirmada! 🚀`);
+    alert(`¡Tu reserva en ${this.restaurante?.nombre} ha sido confirmada!`);
     this.router.navigate(['/restaurantes']);
   }
 }

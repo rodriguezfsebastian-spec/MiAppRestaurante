@@ -1,19 +1,13 @@
 
-<div class="reserva-page">
-<<<<<<< HEAD
-  
-  <div class="banner-verde">
+<div class="reserva-page">  
+
+<div class="banner-verde">
     <div class="logo-container">
       <h1>THE EXOTIC RESTAURANT</h1>
       <p>QUE EL EXOTISMO NO TAPE LA REALIDAD.</p>
     </div>
-=======
-  <div class="banner-logos">
-    <span class="emoji-logo">🍖</span>
->>>>>>> 6228fa62968dfbe8eb59b52ec8f2ba8ef7109b6d
   </div>
-
-
+  
   <!-- Selector de Pestañas (Tabs) -->
 @if (restaurante) {
   <div class="container mt-3 main-container">
@@ -39,12 +33,12 @@
       }
 
       @if (tab === 2) {
-        <div class="row align-items-center animate-fade">
-          <div class="col-8">
-            <p class="text-muted small m-0">
-              {{ restaurante.texto }} Disfruta de una experiencia gastronómica de alta calidad con nosotros.
-            </p>
-          </div>
+          <div class="row align-items-center animate-fade">
+            <div class="col-8">
+              <p class="text-muted small m-0">
+                {{ restaurante.texto }} Disfruta de una experiencia gastronómica de alta calidad con nosotros.
+              </p>
+            </div>
           <div class="col-4 text-center">
             <span style="font-size: 3rem;">🍹</span>
           </div>
@@ -73,5 +67,6 @@
     <p class="text-muted">Error al cargar los datos de la reserva.</p>
     <button class="btn btn-danger" [routerLink]="['/restaurantes']">Volver al catálogo</button>
   </div>
+
 }
 </div>
