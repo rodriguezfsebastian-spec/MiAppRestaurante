@@ -50,6 +50,14 @@
           <h4 class="fw-bold h6 text-danger">Zona de Ubicación</h4>
           <p class="text-muted small">Sector exclusivo de {{ restaurante.categoria }}. Mesa asignada automáticamente en zona VIP.</p>
         </div>
+        <div *ngIf="tab === 3" class="seccion-ubicacion">
+          <h5 class="fw-bold h6 text-danger">Ubicación en el Mapa</h5>
+          <button class="btn btn-outline-danger w-10 fw-bold" style="font-size: 0.85rem; padding: 10px;" (click)="cambiarTab(3)" [class.active]="tab === 3">
+            Ver Mapa
+          </button>
+
+          <div #mapContainer class="map-box"></div>
+        </div>
       }
 
     </div>
@@ -62,6 +70,7 @@
       </div>
     </div>
   </div>
+  
 } @else {
   <div class="container text-center mt-5">
     <p class="text-muted">Error al cargar los datos de la reserva.</p>

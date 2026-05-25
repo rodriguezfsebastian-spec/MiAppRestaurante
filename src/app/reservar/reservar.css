@@ -186,6 +186,13 @@
   align-items: center;
 }
 
+/* Google Maps */
+.map-box {
+  width: 100%;
+  height: 400px;
+  background-color: #eee; 
+}
+
 .animate-fade {
   animation: fadeIn 0.3s ease-in-out;
 }
